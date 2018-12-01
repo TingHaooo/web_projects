@@ -1,0 +1,24 @@
+@import './sub/reset';
+@import './sub/header';
+@import './sub/skills';
+@import './sub/projects';
+@import './sub/contact';
+@import './sub/animation';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $white;
+  font-weight: 300;
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2%;
+}

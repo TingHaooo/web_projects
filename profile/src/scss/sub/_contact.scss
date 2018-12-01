@@ -1,0 +1,131 @@
+.contact-form {
+  text-align: center;
+  padding-top: 60px;
+  background-color: rgb(231, 231, 231);
+  padding-bottom: 100px;
+  .wrapper {
+    .name-row,
+    .email-row,
+    .message-row {
+      width: 100%;
+      margin-top: 20px;
+      label,
+      input,
+      textarea {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+  }
+  form {
+    label[for="name"],
+    label[for="email"]{
+      margin-right: 10px;
+    }
+
+    textarea,
+    input {
+      padding: 5px 3px;
+      box-shadow: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      border: 1px solid rgb(206, 204, 208);
+      border-radius: 2px;
+      &:focus {
+        box-shadow: inset 0 0 1px 1px rgb(1, 217, 210);
+        border: 1px solid rgb(1, 217, 210);
+      }
+    }
+
+    input {
+      width: 200px;
+    }
+    label {
+      padding-bottom: 10px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.contact {
+  background-color: rgb(43, 43, 43);
+  .wrapper {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    line-height: 1.5em;
+    a {
+      color: $white;
+    }
+    .img-container{
+      animation-name: profile-photo;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      top: -75px;
+      right: 30px;
+      position:absolute;
+      width: 150px;
+      height: 150px;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: $white;
+      border: 2px solid $black;
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+    .contact-container {
+      margin-top: 30px;
+      width: 100%;
+      @include respond-to(tablet) {
+        width: 1 / 3 * 100%;
+      }
+      @include respond-to(desktop) {
+        width: 1 / 3 * 100%;
+      }
+      h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      a {
+        color: rgb(124, 122, 121);
+      }
+    }
+
+    .contact-title {
+      width: 100%;
+      h2 {
+        font-size: 1.2em;
+      }
+      a {
+        color: rgb(147, 226, 255);
+      }
+    }
+  }
+}
+
+.copy-right {
+  color: rgb(124, 122, 121);
+  padding: 20px 0;
+  background-color: rgb(43, 43, 43);
+}

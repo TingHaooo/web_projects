@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <title>Ting-Hao Profile</title>
+</head>
+
+<body>
+  <header id="header" class="header--fixed">
+    <div class="head head--fixed" id="head">
+      <div class="wrapper">
+        <div class="brand"><a href="#" class="draw meet">TING-HAO</a></div>
+        <div id="icon-toggler" class="icon-toggler">
+          <div id="icon-line-one" class="icon-line icon-line-one"></div>
+          <div id="icon-line-two" class="icon-line icon-line-two"></div>
+          <div id="icon-line-three" class="icon-line icon-line-three"></div>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a class="nav-link current" href="#header">Home</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#contact-form">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="banner banner--fixed" id="banner">
+      <canvas id="canvas"></canvas>
+      <div class="wrapper">
+        <div
+          class="content"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="50">
+          <h1>Hello, welcome to TING-HAO profile!</h1>
+          <p>I am a web developer.</p>
+          <a href="#skills"><button id="see-more-button">See more</button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="skills" id="skills">
+    <div class="wrapper">
+      <h2 data-aos="fade-in"
+          data-aos-id="skill"
+          data-aos-duration="3000"
+          >Skills
+      </h2>
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderHtml" class="active-border">
+            <div class="circle" id="circleHtml">
+              <span class="prec 270">0</span>
+            </div>
+          </div>
+        </div>
+        <p>HTML</p>
+      </div>
+
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderCss" class="active-border">
+            <div class="circle" id="circleCss">
+              <span class="prec 220">0</span>
+            </div>
+          </div>
+        </div>
+        <p>Css</p>
+      </div>
+
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderJs" class="active-border">
+            <div class="circle" id="circleJs">
+              <span class="prec 300">0</span>
+            </div>
+          </div>
+        </div>
+        <p>Javascript</p>
+      </div>
+
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderReact" class="active-border">
+            <div class="circle" id="circleReact">
+              <span class="prec 200">0</span>
+            </div>
+          </div>
+        </div>
+        <p>React&Redux</p>
+      </div>
+
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderNodejs" class="active-border">
+            <div class="circle" id="circleNodejs">
+              <span class="prec 180">0</span>
+            </div>
+          </div>
+        </div>
+        <p>Node.js</p>
+      </div>
+
+      <div class="skill-container">
+        <div class="prec-container">
+          <div id="activeBorderPython" class="active-border">
+            <div class="circle" id="circlePython">
+              <span class="prec 160">0</span>
+            </div>
+          </div>
+        </div>
+        <p>Python</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="projects" id="projects">
+    <h2 class="projects-title">Project</h2>
+    <div class="wrapper">
+      <div class="project-catalog" id="project-catalog">
+        <div class="fixed-container" id="fixed-container">
+          <h2>Projects</h2>
+          <ul>
+            <li><a href="#project-one" style="border-left: 2px solid white; color: white">project-1</a></li>
+            <li><a href="#project-two">project-2</a></li>
+            <li><a href="#project-three">project-3</a></li>
+            <li><a href="#project-four">project-4</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="projects-content">
+        <div class="project" id="project-one">
+          <img src="https://via.placeholder.com/400x300" alt="">
+          <h3>project-1</h3>
+          <p>This is the project decription, hahahahha</p>
+        </div>
+        <div class="project" id="project-two">
+          <img src="https://via.placeholder.com/400x300" alt="">
+          <h3>project-2</h3>
+          <p>This is the project decription, hahahahha</p>
+        </div>
+        <div class="project" id="project-three">
+          <img src="https://via.placeholder.com/400x300" alt="">
+          <h3>project-3</h3>
+          <p>This is the project decription, hahahahha</p>
+        </div>
+        <div class="project" id="project-four">
+          <img src="https://via.placeholder.com/400x300" alt="">
+          <h3>project-4</h3>
+          <p>This is the project decription, hahahahha</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form" id="contact-form">
+    <h2>Contact Me</h2>
+    <form class="wrapper" action="" method="post">
+      <div class="name-row">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Please input your name"
+          required
+        >
+      </div>
+
+      <div class="email-row">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Please input your email"
+          required
+        >
+      </div>
+
+      <div class="message-row">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="40" rows="10" placeholder="You can leave any message you want :)"></textarea>
+      </div>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div class="contact" id="contact">
+    <div class="wrapper">
+      <div class="img-container">
+        <img src="./static/profile-photo.jpg" alt="">
+      </div>
+
+      <div class="contact-title">
+        <h2>TING-HAO Web Developer</h2>
+        <a href="mailto:ztingh@gmail.com">ztingh@gmail.com</a>
+      </div>
+
+      <div class="contact-container menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-container contact-link">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:ztingh@gmail.com">ztingh@gmail.com</a></li>
+          <li><a href="#skills">Wechat</a></li>
+          <li><a href="#skills">Line</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-container social">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ztingh">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/ting-hao-chang-4b520b147/">Linkin</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100002654370144">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy-right">
+    <div class="wrapper">
+      Copyright &copy; TING-HAO 2018
+    </div>
+  </div>
+  <!-- aos -->
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

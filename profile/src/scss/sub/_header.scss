@@ -1,0 +1,147 @@
+@import 'variable';
+@import 'mixin';
+@import 'banner';
+
+header {
+  height: 100vh;
+  position: relative;
+}
+
+.head {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    @include respond-to(tablet) {
+      height: 60px;
+    }
+  }
+  .brand {
+    cursor: pointer;
+    a{
+      font-weight: bold;
+      font-size: 1em;
+      color: $black;
+      display: block;
+      padding: 10px 15px;
+      position: relative;
+      box-shadow: inset 0 0 0 2px transparent;
+      &:before,
+      &:after{
+        box-sizing: border-box;
+        position: absolute;
+        content: "";
+      }
+    }
+  }
+  .icon-toggler {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    @include respond-to(tablet){
+      display: none;
+    }
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+  .icon-toggler-fixed {
+    position: fixed;
+    right: 10px;
+  }
+  .icon-line {
+    width: 35px;
+    height: 2px;
+    margin-top: 8px;
+    background-color: $black;
+    transition: 0.3s ease-in-out;
+  }
+  .icon-line-one {
+    margin-top: 0;
+  }
+  .icon-line-one-change{
+    transform: translate(0, 10px) rotate(45deg);
+  }
+  .icon-line-two-change{
+    opacity: 0;
+  }
+  .icon-line-three-change{
+    transform: translate(0, -10px) rotate(-225deg);
+  }
+  .open{
+    display: block;
+  }
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: $white;
+    overflow: hidden;
+    @include respond-to(tablet) {
+      width: auto;
+      height: auto;
+      display: flex;
+      position: static;
+      width: auto;
+      margin-left: auto;
+      z-index: 0;
+    }
+    @include respond-to(desktop) {
+      width: auto;
+      height: auto;
+      display: flex;
+      position: static;
+      width: auto;
+      margin-left: auto;
+      z-index: 0;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li{
+      width: 100%;
+      padding: 20px;
+      @include respond-to(tablet) {
+        padding: 0 17px;
+        width: auto;
+      }
+      @include respond-to(desktop) {
+        padding: 0 20px;
+        width: auto;
+      }
+    }
+    a{
+      display: inline-block;
+      width: 100%;
+      font-weight: 300;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.header--fixed {
+  padding-top: 45px;
+}
+
+.head--fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  z-index: 1;
+  box-shadow: 0 1px 3px 0 rgb(125, 125, 125);
+  .wrapper {
+    height: 45px;
+  }
+}

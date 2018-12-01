@@ -1,0 +1,153 @@
+// animation
+.center {
+  &:hover {
+    transition: color 0.5s ease-in-out;
+    color: $black;
+  }
+  // Set up base styles, we're going to scale instead of animating width/height
+  &:before,
+  &:after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.75s;
+    transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+  }
+  // scale3d(<scale-horizontal>, <scale-vertical>, <scale-depth>);
+  &:before {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    transform: scale3d(0, 1, 1);
+  }
+  &:after {
+    border-left: 2px solid $black;
+    border-right: 2px solid $black;
+    transform: scale3d(1, 0, 1);
+  }
+  &:hover:before,
+  &:hover:after {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.draw {
+  &:hover {
+    transition: color 0.25s;
+    color: $black;
+  }
+  &:before,
+  &:after{
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    width: 0%;
+    height: 0%;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    right: 0;
+    bottom: 0;
+  }
+  &:hover:before,
+  &:hover:after{
+    width: 100%;
+    height: 100%;
+  }
+  &:hover:before{
+    border-top-color: $black;
+    border-right-color: $black;
+    transition:
+      border-right-color 0s ease-in-out 0.25s,
+      width 0.25s ease-in-out 0s,
+      height 0.25s ease-in-out 0.25s;
+  }
+  &:hover:after{
+    border-left-color: $black;
+    border-bottom-color: $black;
+    transition:
+      border-bottom-color 0s ease-in-out 0.5s,
+      border-left-color 0s ease-in-out 0.75s,
+      width 0.25s ease-in-out 0.5s,
+      height 0.25s ease-in-out 0.75s;
+  }
+}
+
+.meet {
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    top: 0;
+    left: 0;
+  }
+  &:hover:before{
+    border-top-color: $black;
+    border-right-color: $black;
+    transition:
+      border-right-color 0s ease-in-out 0.3s,
+      width 0.3s ease-in-out 0s,
+      height 0.3s ease-in-out 0.3s;
+  }
+  &:hover:after{
+    border-left-color: $black;
+    border-bottom-color: $black;
+    transition:
+      border-bottom-color 0s ease-in-out 0.3s,
+      width 0.3s ease-in-out 0.3s,
+      height 0.3s ease-in-out 0s;
+  }
+}
+
+@keyframes profile-photo {
+  0% {
+    top: -75px;
+    right: 1000px;
+  }
+
+  100% {
+    right: 30px;
+    transform: rotate(360deg);
+  }
+}
+
+@include respond-to(mobile){
+  @keyframes profile-photo {
+  }
+}
+
+@include respond-to(tablet){
+  @keyframes profile-photo {
+    0% {
+      top: -75px;
+      right: 500px;
+    }
+
+    100% {
+      right: 30px;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@keyframes arrow {
+  30% {
+    bottom: 30px;
+  }
+
+  40% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  60% {
+    bottom: 0px;
+  }
+
+}
