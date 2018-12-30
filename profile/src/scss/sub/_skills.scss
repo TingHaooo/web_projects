@@ -9,7 +9,8 @@ $skill-prec-padding: 10px;
 .skills{
   position: relative;
   background-color: $black;
-  border: 10px solid rgb(212, 212, 212);
+  padding: 150px 0;
+  // border: 10px solid rgb(212, 212, 212);
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +20,7 @@ $skill-prec-padding: 10px;
     text-align: center;
     font-size: 2em;
     font-weight: 400;
-    padding: 55px 0;
+    padding-bottom: 50px;
     width: 100%;
     color: $white;
   }
