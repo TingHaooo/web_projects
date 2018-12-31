@@ -4,20 +4,16 @@ import { connect } from 'react-redux'
 import { addFilter, removeFilter} from '../../store/actions/filterActions'
 
 class Filter extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleClick = (filter, type, checkState) => {
-    const { filters, addFilter, removeFilter } = this.props;
-
+    const { addFilter, removeFilter } = this.props;
     // state true -> add to filters (checked)
     // state false -> remove from filters (unchecked)
     checkState ?
     // add filter
     addFilter(filter, type)
     :
-    //remove filter
+    // remove filter
     removeFilter(filter, type)
   }
 
@@ -25,9 +21,7 @@ class Filter extends Component {
     const filters = {
       styles: ['men', 'lady'],
       colors: ['yellow', 'pink', 'gray', 'blue', 'black']
-    }
-
-
+    };
     const stylesButtonList = filters.styles.map((style) => {
       return (
         <FilterButton
@@ -38,7 +32,6 @@ class Filter extends Component {
         />
       )
     });
-
     const colorButtonList = filters.colors.map((color) => {
       return (
         <FilterButton
@@ -64,12 +57,12 @@ class Filter extends Component {
   }
 }
 
-
 const mapStateToProps = state => {
   return {
     filters: state.filters.items
   }
 }
+
 const mapDispatchToProps = dispatch => {
   return {
     addFilter: (filter, type) => dispatch(addFilter(filter, type)),

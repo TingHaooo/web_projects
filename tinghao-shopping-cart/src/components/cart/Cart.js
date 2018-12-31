@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { checkout } from '../../store/actions/cartActions'
 import { formatPrice, toTwoDecimalPlace} from '../../util'
 
-
 class Cart extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +21,6 @@ class Cart extends Component {
       cartList.forEach(product => {
         subtotal += product.price * cartQuantity[product._id]
       });
-
       this.setState({
         subtotal: formatPrice(toTwoDecimalPlace(subtotal).toString()),
         isOpen: true
@@ -49,7 +47,6 @@ class Cart extends Component {
 
   render() {
     const { cartList } = this.props;
-
     //map cartList
     const cartProducts = cartList.map(product => {
       return (

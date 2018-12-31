@@ -29,9 +29,7 @@ class Sort extends Component {
       </div>
     );
   }
-
 }
-
 
 const mapDispatchToProps = (dispatch) => {
   return {

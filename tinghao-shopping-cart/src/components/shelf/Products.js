@@ -1,5 +1,4 @@
 import React, { Component, Fragment} from 'react';
-import memoize from "memoize-one";
 import ProductSummary from './ProductSummary'
 import { connect } from 'react-redux'
 import { fetchProductAction } from '../../store/actions/productActions'
@@ -22,7 +21,7 @@ class Products extends Component {
         products = products.filter(product => filters[type].indexOf(product[type]) > -1 )
       }
     })
-  return products;
+    return products;
   }
 
   sort = (products, sortMethod) => {
@@ -35,12 +34,11 @@ class Products extends Component {
 
   render() {
     const { products, filters, sortMethod } = this.props;
-    //filter products
+    // filter products
     var filteredProducts = this.filter(products, filters);
-    // //sort products
+    // sort products
     var sortedFilteredProducts = this.sort(filteredProducts, sortMethod);
-
-
+    // map products
     const productList = sortedFilteredProducts.map(product => {
       return (
         <ProductSummary product={product} key={product._id} sort={sortMethod}/>

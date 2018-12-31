@@ -1,19 +1,16 @@
-import { ADD_TO_CART, DEL_FROM_CART, CHECKOUT } from '../actions/types'
+import { ADD_TO_CART, DEL_FROM_CART, CHECKOUT } from '../actions/types';
 
 const initState = {
   items: [],
   quantity: {}
-}
+};
 
 const cartReducer = (state = initState, action) => {
-  console.log(state);
   switch(action.type) {
-
     case ADD_TO_CART:
-      //create productIdArray
+      // create productIdArray
       var productIdArray = [];
       state.items.forEach((product)=> productIdArray.push(product._id));
-
       return productIdArray.includes(action.payload._id) ?
         // item exist
         {
@@ -24,7 +21,7 @@ const cartReducer = (state = initState, action) => {
           }
         }
         :
-        //if item doesn't exist
+        // if item doesn't exist
         {
           ...state,
           items: [...state.items, action.payload],
@@ -34,9 +31,7 @@ const cartReducer = (state = initState, action) => {
           }
         }
 
-
     case DEL_FROM_CART:
-      console.log(action.payload);
       return {
         ...state,
         items: state.items.filter(
@@ -54,7 +49,6 @@ const cartReducer = (state = initState, action) => {
     default:
       return state;
   }
-  return state;
-}
+};
 
 export default cartReducer;

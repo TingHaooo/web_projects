@@ -4,10 +4,7 @@ import { addToCart } from '../../store/actions/cartActions'
 import { formatPrice } from '../../util'
 
 class ProductSummary extends Component {
-  constructor(props) {
-    super(props)
-  }
-
+  
   handleClick = () => {
     const { product, addToCart } = this.props;
     addToCart(product);

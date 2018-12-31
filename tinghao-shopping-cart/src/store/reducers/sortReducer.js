@@ -2,7 +2,7 @@ import { SELECT_SORT } from '../actions/types';
 
 const initState = {
   item: 'l-h'
-}
+};
 
 const sortReducer = (state = initState, action) => {
   switch(action.type) {
@@ -15,6 +15,6 @@ const sortReducer = (state = initState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default sortReducer;

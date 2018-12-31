@@ -4,9 +4,7 @@ import { capitalize } from '../../util'
 class FilterButton extends Component {
   constructor(props) {
     super(props);
-
     const { filter } = this.props;
-
     const colors = {
       yellow:'#FFDC00',
       black: '#111111',
@@ -14,8 +12,8 @@ class FilterButton extends Component {
       blue: '#0074D9',
       pink: 'pink',
       darkGray: '#3e3e3e'
-    }
-
+    };
+    
     this.state = {
       checked: false,
       buttonStyle: {
@@ -29,7 +27,6 @@ class FilterButton extends Component {
   handleChange = () => {
     const { checked } = this.state;
     const { filter, type, handleCheckboxChange } = this.props;
-
     // reverse checked
     this.setState({
       checked: !this.state.checked

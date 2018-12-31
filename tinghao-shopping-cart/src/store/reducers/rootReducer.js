@@ -5,7 +5,6 @@ import filterReducer from './filterReducer'
 import sortReducer from './sortReducer'
 import checkoutReducer from './checkoutReducer'
 
-
 const rootReducer = combineReducers({
   products: productReducer,
   cart: cartReducer,
@@ -14,5 +13,4 @@ const rootReducer = combineReducers({
   checkout: checkoutReducer
 });
 
-
-export default rootReducer
+export default rootReducer;

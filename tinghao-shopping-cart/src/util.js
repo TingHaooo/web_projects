@@ -1,25 +1,27 @@
 export const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
 export const compare = (sortMethod) => {
-
   switch(sortMethod) {
     case 'l-h':
-    return (a, b) => {
-      var priceA = parseFloat(a.price);
-      var priceB = parseFloat(b.price);
-      if (priceA  > priceB) return 1;
-      if (priceA  < priceB) return -1;
-      return 0;
-    }
+      return (a, b) => {
+        var priceA = parseFloat(a.price);
+        var priceB = parseFloat(b.price);
+        if (priceA  > priceB) return 1;
+        if (priceA  < priceB) return -1;
+        return 0;
+      }
 
     case 'h-l':
-    return (a, b) => {
-      var priceA = parseFloat(a.price);
-      var priceB = parseFloat(b.price);
-      if (priceA > priceB) return -1;
-      if (priceA < priceB) return 1;
-      return 0;
-    }
+      return (a, b) => {
+        var priceA = parseFloat(a.price);
+        var priceB = parseFloat(b.price);
+        if (priceA > priceB) return -1;
+        if (priceA < priceB) return 1;
+        return 0;
+      }
+
+    default:
+      return null;
   }
 }
 

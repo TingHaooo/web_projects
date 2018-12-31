@@ -5,18 +5,13 @@ import { formatPrice, toTwoDecimalPlace} from '../../util'
 
 class CartProduct extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   handleClick = () => {
-    const { product, delFromCart} = this.props;
-
+    const { product, delFromCart } = this.props;
     delFromCart(product._id);
   }
 
   render() {
-    const { product, cartQuantity} = this.props;
+    const { product, cartQuantity } = this.props;
     const quantity = cartQuantity[product._id];
     const price =
     formatPrice(
@@ -45,7 +40,6 @@ class CartProduct extends React.Component {
     )
   }
 }
-
 
 const mapDispatchToProps = (dispatch) => {
   return {
